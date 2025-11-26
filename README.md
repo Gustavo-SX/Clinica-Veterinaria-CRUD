@@ -1,205 +1,53 @@
-🐾 Clínica Veterinária – Sistema CRUD em Java
+🐾 Clínica Veterinária – Sistema em Java
 
-Este projeto é um sistema simples de cadastro e gerenciamento para uma clínica veterinária, desenvolvido totalmente em Java utilizando os conceitos de Programação Orientada a Objetos (POO).
+Este projeto implementa um sistema básico de gestão para uma clínica veterinária, utilizando Java e conceitos de Programação Orientada a Objetos (POO).
 
-O sistema permite administrar:
+O sistema permite cadastrar e gerenciar:
 
-Animais (Gatos e Cachorros)
+Animais (Gato, Cachorro)
 
 Veterinários
 
 Consultas
 
-Leituras, atualizações e remoções de dados
-
-Tudo isso através de um menu interativo no console.
+Tudo é controlado por um menu simples no console.
 
 📌 Funcionalidades
-🔹 1. Cadastro
 
-Cadastrar Animal
+Cadastrar animais (nome, idade, espécie)
 
-Nome
+Cadastrar veterinários (id, nome, CPF, telefone)
 
-Idade
+Agendar consultas entre animal e veterinário
 
-Espécie (Gato ou Cachorro)
+Listar animais, veterinários e consultas
 
-Cadastrar Veterinário
+Atualizar a data de consultas
 
-ID do veterinário
+Remover consultas
 
-Nome
+📂 Estrutura de Classes
 
-CPF
+Animal – classe base com nome, idade, espécie e método EmitirSom()
 
-Telefone
+Gato – emite “Miau miau”
 
-Agendar Consulta
+Cachorro – emite “Au au”
 
-Seleciona animal pelo índice da lista
+Veterinario – ID, nome, CPF e telefone
 
-Seleciona veterinário
+Consulta – contém animal, veterinário e data
 
-Define data
+ClinicaPetMain – menu principal e controle das listas
 
-🔹 2. Leitura
+🧱 Conceitos Utilizados
 
-Listar todos os animais cadastrados
+Herança
 
-Listar veterinários
+Sobrescrita de métodos
 
-Listar consultas agendadas
+Encapsulamento
 
-🔹 3. Atualização
+Composição
 
-Alterar a data de uma consulta existente
-
-🔹 4. Remoção
-
-Remover uma consulta pelo ID
-
-📂 Estrutura do Projeto
-src/
-├── Animal.java
-├── Gato.java
-├── Cachorro.java
-├── Veterinario.java
-├── Consulta.java
-└── ClinicaPetMain.java
-
-🧱 Classes
-Animal (abstrata)
-
-Classe base para todos os animais, contendo:
-
-nome
-
-idade
-
-espécie
-
-método abstrato EmitirSom()
-
-Gato
-
-Especialização de Animal, sobrescreve:
-
-EmitirSom() → "Miau miau"
-
-Cachorro
-
-Especialização de Animal, sobrescreve:
-
-EmitirSom() → "Au au"
-
-Veterinario
-
-Armazena informações de um veterinário:
-
-idveterinario
-
-nome
-
-cpf
-
-telefone
-
-Consulta
-
-Agrupa:
-
-Data da consulta
-
-Animal
-
-Veterinário
-
-Possui também:
-
-setData() para atualizar a data
-
-ClinicaPetMain
-
-Arquivo principal, responsável por:
-
-Menu
-
-Entrada de dados
-
-Manipular listas
-
-ArrayList<Animal>
-
-ArrayList<Veterinario>
-
-ArrayList<Consulta>
-
-▶️ Como Executar
-
-Certifique-se de ter o Java 8+ instalado.
-
-Compile todas as classes:
-
-javac *.java
-
-
-Execute o programa principal:
-
-java ClinicaPetMain
-
-
-O menu aparecerá no console.
-
-💡 Exemplos de Uso
-➤ Cadastrar Animal
-Nome: Rex
-Idade: 4
-Espécie: cachorro
-
-➤ Cadastrar Veterinário
-ID: 1
-Nome: Dr. João
-CPF: 000.000.000-00
-Telefone: 99999-9999
-
-➤ Agendar Consulta
-Selecione Animal: 0 - Rex
-Selecione Veterinário: 0 - Dr. João
-Data: 15/12/2025
-
-🧪 Conceitos de POO Utilizados
-
-Herança (Gato e Cachorro → Animal)
-
-Classes abstratas
-
-Polimorfismo (EmitirSom() sobrescrito)
-
-Encapsulamento (getters e setters)
-
-Composição (Consulta contém Animal e Veterinário)
-
-🛠 Tecnologias Utilizadas
-
-Java SE
-
-Scanner (entrada de dados)
-
-ArrayList (armazenamento)
-
-📘 Objetivo Educacional
-
-Este projeto serve como prática para:
-
-Modelagem orientada a objetos
-
-Uso de listas dinâmicas
-
-Estruturação de CRUD no console
-
-Manipulação de objetos e relacionamentos
-
-🤝 Contribuições
-
-Sinta-se livre para enviar melhorias, novas funcionalidades ou sugestões.
+Uso de ArrayList para armazenamento
